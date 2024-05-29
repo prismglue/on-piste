@@ -1,0 +1,45 @@
+local camera = require('orthographic.camera')
+
+function init(self)
+	msg.post('@render:', 'use_camera_projection')
+	msg.post(".", "acquire_input_focus")
+	--msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
+	local sx, sy = window.get_size()
+	print(sx)
+	print(sy)
+	-- if DISPLAY_HEIGHT == sy then
+	-- 	-- matched width, squished horizontally
+	-- 	print("SQUISHEMS")
+	-- end
+	-- print(DISPLAY_WIDTH)
+	-- print(DISPLAY_HEIGHT)
+	self.timer = 0
+end
+
+function update(self, dt)
+	self.timer = self.timer + dt
+	if self.timer > 1 then
+		--print("")
+		--print(go.get_position('controls'))
+		self.timer = 0
+	end
+end
+
+local function xy(t)
+	print('x: ' .. t.x .. " y: " .. t.y)
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then
+		--return vmath.matrix4_orthographic(xoffset, xoffset + projected_width, yoffset, yoffset + projected_height, near_z, far_z)
+		print("Touch!")
+	end
+end
+
+-- 380
+-- 1919
+-- 1080
+
+-- work out what i want the deadzone to be
+-- compute what the offset is
+-- when the offset... how does... hmm...
