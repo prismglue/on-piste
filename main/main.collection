@@ -30,6 +30,26 @@ instances {
       value: "FIXED_AUTO"
       type: PROPERTY_TYPE_HASH
     }
+    properties {
+      id: "follow"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "follow_immediately"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "follow_target"
+      value: "/player"
+      type: PROPERTY_TYPE_HASH
+    }
+    properties {
+      id: "follow_offset"
+      value: "0.0, 585.0, 0.0"
+      type: PROPERTY_TYPE_VECTOR3
+    }
   }
   scale3 {
     x: 1.0
@@ -221,7 +241,7 @@ embedded_instances {
   "    shape_type: TYPE_BOX\\n"
   "    position {\\n"
   "      x: 0.0\\n"
-  "      y: 0.0\\n"
+  "      y: 187.0\\n"
   "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
@@ -235,7 +255,7 @@ embedded_instances {
   "    id: \\\"\\\"\\n"
   "  }\\n"
   "  data: 1500.0\\n"
-  "  data: 375.0\\n"
+  "  data: 562.5\\n"
   "  data: 10.0\\n"
   "}\\n"
   "linear_damping: 0.0\\n"
@@ -281,7 +301,7 @@ embedded_instances {
   ""
   position {
     x: 540.0
-    y: 25.0
+    y: 0.0
     z: 0.0
   }
   rotation {
@@ -298,30 +318,7 @@ embedded_instances {
 }
 embedded_instances {
   id: "bg"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"background\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "textures {\\n"
-  "  sampler: \\\"texture_sampler\\\"\\n"
-  "  texture: \\\"/main/main.atlas\\\"\\n"
-  "}\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 540.0\n"
-  "    y: 960.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
+  data: ""
   position {
     x: 0.0
     y: 0.0
@@ -344,7 +341,7 @@ embedded_instances {
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"icon_180\\\"\\n"
+  "  data: \"default_animation: \\\"coffee_cup\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "textures {\\n"
@@ -362,6 +359,11 @@ embedded_instances {
   "    y: 0.0\n"
   "    z: 0.0\n"
   "    w: 1.0\n"
+  "  }\n"
+  "  scale {\n"
+  "    x: 3.0\n"
+  "    y: 3.0\n"
+  "    z: 3.0\n"
   "  }\n"
   "}\n"
   ""

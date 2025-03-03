@@ -47,7 +47,6 @@ shared_state = 1
 [physics]
 gravity_y = -20.0
 scale = 0.01
-debug = 1
 
 [render]
 clear_color_red = 0.95
@@ -57,4 +56,8 @@ clear_color_alpha = 0.0
 
 [html5]
 scale_mode = downscale_fit
+
+[graphics]
+default_texture_min_filter = nearest
+default_texture_mag_filter = nearest
 

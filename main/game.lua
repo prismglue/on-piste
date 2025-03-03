@@ -9,7 +9,7 @@ M.ctrl_speed = 0
 -- in any script using the functions.
 M.set_control_speed = function(speed)
 	M.ctrl_speed = speed
-	M.ctrl_speed = M.ctrl_speed - 0.3 -- lazy remapping to a negative range
+	M.ctrl_speed = M.ctrl_speed - 0.5 -- lazy remapping to a negative range
 end
 
 M.set_control_direction = function(x_pct)
